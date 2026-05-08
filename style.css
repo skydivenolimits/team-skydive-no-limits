@@ -1539,3 +1539,127 @@ object-position:center 44%;
 
 }
 
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* BODY */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 52px !important;
+    line-height: 0.95;
+    text-align: left;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* GENERIC SECTION */
+  section {
+    padding: 80px 20px;
+  }
+
+  /* TITLES */
+  h2 {
+    font-size: 48px !important;
+    line-height: 1;
+  }
+
+  /* ABOUT SPLIT */
+  .about-split,
+  .about-content,
+  .founder-grid,
+  .dealer-content,
+  .join-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* TESTI */
+  .about-text,
+  .founder-text,
+  .dealer-text,
+  .join-text {
+    width: 100%;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* IMMAGINI */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* VIDEO */
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* ESPERIENZE CARDS */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .experience-card {
+    height: 420px;
+  }
+
+  /* CTA */
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* AUDIO BUTTON */
+  .audio-control {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+}
+
