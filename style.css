@@ -673,50 +673,6 @@ nav a:hover {
     0 20px 50px rgba(255,0,0,0.35);
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:1100px){
-
-  .founder-cinematic{
-
-    grid-template-columns: 1fr;
-
-    min-height: auto;
-  }
-
-  .founder-visual{
-
-    height: auto;
-    padding-top: 120px;
-  }
-
-  .founder-main-image{
-
-    width: 100%;
-    height: auto;
-  }
-
-  .founder-info{
-
-    padding: 80px 8%;
-  }
-
-  .founder-info h2{
-    font-size: 58px;
-  }
-
-  .founder-info h3{
-    font-size: 28px;
-  }
-
-  .founder-big-text{
-    font-size: 28px;
-  }
-
-}
-
 /* CLICK CARD */
 .exp-card {
   cursor: pointer;
@@ -839,36 +795,11 @@ nav a:hover {
   margin-bottom: 24px;
 }
 
-/* MOBILE */
-@media(max-width: 1000px){
-
-  .exp-detail-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .exp-detail-image img{
-    height: 500px;
-  }
-
-  .exp-detail-content h2{
-    font-size: 44px;
-  }
-
-}
-
 /* layout invertito */
 .exp-detail-grid.reverse {
   grid-template-columns: 1fr 1.1fr;
 }
 
-/* mobile */
-@media(max-width:1000px){
-
-  .exp-detail-grid.reverse{
-    grid-template-columns: 1fr;
-  }
-
-}
 
 /* =========================================
    MOMENTS CINEMATIC
@@ -952,24 +883,6 @@ nav a:hover {
   color: rgba(255,255,255,0.82);
 
   margin-bottom: 24px;
-}
-
-/* mobile */
-@media(max-width:1000px){
-
-  .moments-cinematic{
-    min-height: auto;
-    padding: 120px 8%;
-  }
-
-  .moments-content h2{
-    font-size: 52px;
-  }
-
-  .moments-big{
-    font-size: 28px;
-  }
-
 }
 
 /* =========================================
@@ -1220,27 +1133,6 @@ object-position:center 44%;
   box-shadow: 0 15px 40px rgba(255,0,0,0.35);
 }
 
-/* MOBILE */
-@media(max-width:1000px){
-
-  .dealer-cinematic{
-    min-height: auto;
-    padding: 120px 8%;
-  }
-
-  .dealer-content h2{
-    font-size: 52px;
-  }
-
-  .dealer-big{
-    font-size: 28px;
-  }
-
-  .dealer-stats{
-    gap: 30px;
-  }
-
-}
 
 /* =========================================
    MARIO PREMIUM SECTION
@@ -1513,168 +1405,370 @@ object-position:center 44%;
   pointer-events:none;
 }
 
-/* MOBILE */
-
-@media(max-width:1100px){
-
-  .mario-cinematic{
-    grid-template-columns:1fr;
-  }
-
-  .mario-image-side{
-    height:60vh;
-  }
-
-  .mario-content{
-    padding:100px 8%;
-  }
-
-  .mario-content h2{
-    font-size:64px;
-  }
-
-  .mario-founder-text{
-    font-size:80px;
-  }
-
-}
 
 /* =========================================
-   MOBILE RESPONSIVE
+   MOBILE EXPERIENCE PREMIUM
 ========================================= */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-  body {
-    overflow-x: hidden !important;
-  }
+/* BODY */
 
-  /* NAVBAR */
+body{
+  overflow-x:hidden;
+}
 
-  .navbar {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 18px 20px !important;
-  }
+/* NAVBAR */
 
-  .nav-links {
-    display: none !important;
-  }
+.navbar{
+  background:rgba(0,0,0,0.88);
+  backdrop-filter:blur(14px);
+}
 
-  .logo {
-    width: 180px !important;
-  }
+.nav-container{
 
-  /* HERO */
+  padding:18px 22px;
 
-  .hero {
-    min-height: 100vh !important;
-    padding: 0 24px !important;
-    display: flex !important;
-    align-items: center !important;
-  }
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-  .hero-content {
-    width: 100% !important;
-    z-index: 10 !important;
-  }
+nav{
+  display:none;
+}
 
-  .hero h1 {
-    font-size: 68px !important;
-    line-height: 0.88 !important;
-    max-width: 320px !important;
-    margin-bottom: 24px !important;
-  }
+.logo-icon{
+  height:34px;
+}
 
-  .hero p {
-    font-size: 21px !important;
-  }
+.logo-text{
+  height:30px;
+}
 
-  .hero-video,
-  .hero video {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
+/* HERO */
 
-  /* GENERIC SECTIONS */
+.hero{
+  height:100svh;
+}
 
-  section {
-    padding: 80px 24px !important;
-  }
+.hero video{
+  object-position:center;
+}
 
-  h2 {
-    font-size: 52px !important;
-    line-height: 0.95 !important;
-    margin-bottom: 40px !important;
-  }
+.hero-overlay{
 
-  p {
-    font-size: 18px !important;
-    line-height: 1.7 !important;
-  }
+  left:24px;
+  right:24px;
 
-  /* FLEX LAYOUTS */
+  top:auto;
+  bottom:120px;
 
-  .about-split,
-  .about-content,
-  .founder-grid,
-  .dealer-content,
-  .join-content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 40px !important;
-  }
+  transform:none;
+}
 
-  /* IMAGES */
+.hero-overlay h1{
 
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
+  font-size:clamp(56px,15vw,72px);
 
-  /* VIDEO */
+  line-height:0.88;
 
-  video {
-    width: 100% !important;
-    height: auto !important;
-  }
+  max-width:300px;
+}
 
-  /* EXPERIENCE CARDS */
+.hero-overlay p{
 
-  .experience-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
+  font-size:18px;
 
-  .experience-card {
-    height: 420px !important;
-  }
+  margin-top:24px;
 
-  /* CTA */
+  opacity:0.9;
+}
 
-  .cta-buttons {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
+.audio-control{
 
-  .cta-buttons a {
-    width: 100% !important;
-    text-align: center !important;
-  }
+  width:58px;
+  height:58px;
 
-  /* AUDIO BUTTON */
+  right:24px;
+  bottom:30px;
+}
 
-  .audio-control {
-    width: 56px !important;
-    height: 56px !important;
-    bottom: 24px !important;
-    right: 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
+/* GENERIC SECTION */
+
+.section{
+  padding:100px 24px;
+}
+
+/* ABOUT */
+
+.about-hero{
+  height:80vh;
+}
+
+.about-hero-text{
+
+  left:24px;
+  right:24px;
+}
+
+.about-hero-text h2{
+
+  font-size:54px;
+  line-height:0.95;
+}
+
+.about-hero-text h3{
+
+  font-size:22px;
+}
+
+.split{
+  flex-direction:column;
+}
+
+.split-text h2{
+
+  font-size:52px;
+}
+
+.split-text p{
+
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* MARIO SECTION */
+
+.mario-cinematic{
+
+  display:flex;
+  flex-direction:column;
+}
+
+.mario-image-side{
+
+  height:62vh;
+  order:-1;
+}
+
+.mario-image-side img{
+
+  object-position:center top;
+}
+
+.mario-founder-text{
+  display:none;
+}
+
+.mario-content{
+
+  padding:70px 24px 100px;
+}
+
+.mario-content h2{
+
+  font-size:64px;
+}
+
+.mario-content h3{
+
+  font-size:20px;
+
+  margin-bottom:34px;
+}
+
+.mario-big-text{
+
+  font-size:26px;
+
+  line-height:1.4;
+}
+
+.mario-small-text{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+.mario-stats{
+
+  gap:24px;
+}
+
+.mario-stats strong{
+
+  font-size:42px;
+}
+
+/* ESPERIENZE */
+
+.esperienze-section{
+
+  padding:120px 24px;
+}
+
+.section-title{
+
+  font-size:52px;
+
+  line-height:0.95;
+
+  margin-bottom:50px;
+}
+
+.esperienze-grid{
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+.exp-card{
+
+  height:68vh;
+
+  border-radius:26px;
+}
+
+.exp-text h3{
+
+  font-size:34px;
+}
+
+.exp-text p{
+
+  font-size:16px;
+}
+
+/* EXPERIENCE DETAIL */
+
+.exp-detail{
+
+  padding:120px 24px;
+}
+
+.exp-detail-grid,
+.exp-detail-grid.reverse{
+
+  grid-template-columns:1fr;
+}
+
+.exp-detail-image img{
+
+  height:420px;
+
+  border-radius:22px;
+}
+
+.exp-detail-content h2{
+
+  font-size:52px;
+}
+
+.exp-big{
+
+  font-size:28px;
+}
+
+.exp-detail-content p{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+/* MOMENTS */
+
+.moments-special{
+
+  min-height:auto;
+
+  padding:120px 24px;
+}
+
+.moments-special h2{
+
+  font-size:52px;
+
+  line-height:0.95;
+}
+
+.moments-special .moments-big{
+
+  font-size:26px;
+}
+
+.moments-special p{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+/* DEALER */
+
+.dealer-cinematic{
+
+  min-height:auto;
+
+  padding:120px 24px;
+}
+
+.dealer-content{
+
+  padding-right:0;
+}
+
+.dealer-content h2{
+
+  font-size:54px;
+
+  line-height:0.95;
+}
+
+.dealer-big{
+
+  font-size:28px;
+}
+
+.dealer-content p{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+.dealer-bg img{
+
+  opacity:0.28;
+}
+
+/* JOIN */
+
+.join{
+
+  padding:120px 24px;
+}
+
+.join h2{
+
+  font-size:52px;
+
+  line-height:1;
+}
+
+/* CONTATTI */
+
+#contatti{
+
+  padding:120px 24px 80px;
+}
+
+#contatti h2{
+
+  font-size:52px;
+}
 
 }
