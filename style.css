@@ -1,0 +1,1541 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+/* omino */
+.logo-icon {
+  height: 42px;   /* 🔥 prima era 32 → ora più importante */
+}
+
+/* scritta */
+.logo-text {
+  height: 50px;   /* 🔥 prima 18 → ora leggibile */
+}
+
+/* hover */
+.logo img {
+  transition: 0.3s;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  transform: translateY(-1px);
+}
+
+.logo-text {
+  transform: translateY(1px);
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: red;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.hero video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.hero-overlay p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* AUDIO */
+.audio-control {
+  position: absolute;
+  bottom: 90px;
+  right: 30px;
+  z-index: 3;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audio-control {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ABOUT HERO */
+.about-hero {
+  position: relative;
+  height: 100vh;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+}
+
+.about-hero-text h2 {
+  font-size: 50px;
+}
+
+.about-hero-text h3 {
+  color: #fff; /* FIX: ora bianco */
+  margin: 15px 0 25px 0; /* FIX spacing */
+}
+
+.cta {
+  background: red;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTION */
+.section {
+  padding: 120px 60px;
+}
+
+/* SPLIT */
+.split {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.split-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.split-text h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.split-text p {
+  margin-bottom: 25px; /* 🔥 FIX spazio tra paragrafi */
+  line-height: 1.6;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.stat {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.stat span {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* ESPERIENZE */
+.esperienze-section {
+  padding: 180px 60px; /* 🔥 più aria verticale */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 80px;
+}
+
+.esperienze-grid {
+  display: flex;
+  gap: 40px; /* 🔥 più spazio tra box */
+}
+
+.exp-card {
+  position: relative;
+  flex: 1;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.exp-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.exp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.exp-text {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.exp-text h3 {
+  font-size: 22px;
+}
+
+.exp-text p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.exp-card:hover img {
+  transform: scale(1.1);
+}
+
+.esperienze-cta {
+  margin-top: 60px;
+  opacity: 0.7;
+}
+
+/* DEALER FIX */
+.dealer {
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.dealer h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.big-text {
+  margin-bottom: 30px;
+}
+
+.dealer-cta {
+  margin-top: 30px;
+}
+
+.dealer-cta p {
+  margin-bottom: 15px;
+}
+
+.dealer-cta a {
+  display: inline-block;
+  background: red;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+/* JOIN FIX */
+.join {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.join h2 {
+  margin-bottom: 25px;
+}
+
+.join a {
+  display: inline-block;
+  background: red;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTATTI FIX */
+#contatti {
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+#contatti h2 {
+  margin-bottom: 20px;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.instagram-link img {
+  width: 25px;
+}
+
+/* NAV HIGHLIGHT */
+.nav-highlight {
+  color: #ff2a2a;
+  font-weight: 600;
+}
+
+/* =========================================
+   FOUNDER CINEMATIC PRO
+========================================= */
+
+.founder-cinematic{
+
+  position: relative;
+
+  min-height: 115vh;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+/* BG LIGHT */
+
+.founder-bg-light{
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,0,0,0.16) 0%,
+      transparent 70%
+    );
+
+  top: -250px;
+  left: -250px;
+
+  filter: blur(60px);
+
+  z-index: 1;
+}
+
+/* =========================================
+   IMAGE SIDE
+========================================= */
+
+.founder-visual{
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+
+  z-index: 2;
+}
+
+/* FOTO HERO */
+
+.founder-main-image{
+
+  position: relative;
+  z-index: 3;
+
+  height: 105vh;
+  width: auto;
+
+  object-fit: contain;
+
+  filter:
+    contrast(1.05)
+    saturate(1.08);
+
+  transform: scale(1.05);
+
+  transition: 0.6s ease;
+}
+
+/* HOVER */
+
+.founder-visual:hover .founder-main-image{
+
+  transform:
+    scale(1.08)
+    translateY(-10px);
+}
+
+/* CINEMATIC OVERLAY */
+
+.founder-image-gradient{
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.05) 0%,
+      rgba(0,0,0,0.78) 100%
+    );
+
+  z-index: 4;
+}
+
+/* =========================================
+   INFO SIDE
+========================================= */
+
+.founder-info{
+
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    120px
+    8vw
+    120px
+    0;
+}
+
+/* LABEL */
+
+.founder-top-label{
+
+  color: #ff2b2b;
+
+  letter-spacing: 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 28px;
+}
+
+/* TITLE */
+
+.founder-info h2{
+
+  font-size: 96px;
+  line-height: 0.92;
+
+  margin-bottom: 20px;
+
+  font-weight: 900;
+}
+
+.founder-info h2 span{
+  color: #ff2b2b;
+}
+
+/* ROLE */
+
+.founder-info h3{
+
+  font-size: 38px;
+  color: rgba(255,255,255,0.72);
+
+  margin-bottom: 50px;
+}
+
+/* NUMBERS */
+
+.founder-numbers{
+
+  display: flex;
+  gap: 50px;
+
+  margin-bottom: 50px;
+
+  flex-wrap: wrap;
+}
+
+.founder-numbers strong{
+
+  display: block;
+
+  color: #ff2b2b;
+
+  font-size: 54px;
+  line-height: 1;
+}
+
+.founder-numbers span{
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 16px;
+}
+
+/* MAIN TEXT */
+
+.founder-big-text{
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  max-width: 700px;
+
+  margin-bottom: 34px;
+}
+
+/* SECONDARY TEXT */
+
+.founder-small-text{
+
+  font-size: 20px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.78);
+
+  max-width: 700px;
+
+  margin-bottom: 40px;
+}
+
+/* LINKS */
+
+.founder-links{
+
+  display: flex;
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 35px;
+}
+
+.founder-links a{
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: white;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.founder-links a:hover{
+
+  transform: translateY(-3px);
+
+  border-color: #ff2b2b;
+
+  background: rgba(255,0,0,0.12);
+}
+
+/* SKILLS */
+
+.founder-skills{
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-bottom: 50px;
+}
+
+.founder-skills span{
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  color: rgba(255,255,255,0.85);
+
+  transition: 0.3s;
+}
+
+.founder-skills span:hover{
+
+  border-color: #ff2b2b;
+
+  transform: translateY(-2px);
+}
+
+/* BUTTON */
+
+.founder-button{
+
+  width: fit-content;
+
+  padding: 20px 40px;
+
+  border-radius: 14px;
+
+  background: #ff2b2b;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.founder-button:hover{
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 50px rgba(255,0,0,0.35);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:1100px){
+
+  .founder-cinematic{
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .founder-visual{
+
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .founder-main-image{
+
+    width: 100%;
+    height: auto;
+  }
+
+  .founder-info{
+
+    padding: 80px 8%;
+  }
+
+  .founder-info h2{
+    font-size: 58px;
+  }
+
+  .founder-info h3{
+    font-size: 28px;
+  }
+
+  .founder-big-text{
+    font-size: 28px;
+  }
+
+}
+
+/* CLICK CARD */
+.exp-card {
+  cursor: pointer;
+}
+
+/* SEZIONI DETTAGLIO */
+.exp-detail {
+  min-height: 70vh;
+  padding: 140px 80px;
+  background: #050505;
+  border-top: 1px solid #111;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-detail.active {
+  display: flex;
+}
+
+.exp-detail-content {
+  max-width: 900px;
+  text-align: center;
+  color: white;
+}
+
+.exp-detail-content h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.exp-big {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ff2a2a;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+.exp-detail-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.exp-card {
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-10px);
+}
+/* =========================================
+   EXPERIENCE DETAIL PREMIUM
+========================================= */
+
+.exp-detail {
+  display: none;
+  min-height: 100vh;
+  padding: 140px 8%;
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.exp-detail.active {
+  display: flex;
+  align-items: center;
+}
+
+.exp-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+}
+
+.exp-detail-image img {
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+  border-radius: 28px;
+
+  box-shadow:
+    0 0 60px rgba(255,0,0,0.12);
+}
+
+.exp-detail-content {
+  max-width: 650px;
+}
+
+.exp-label {
+  color: #ff2b2b;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.exp-detail-content h2 {
+  font-size: 64px;
+  line-height: 1;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.exp-big {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.exp-detail-content p {
+  color: rgba(255,255,255,0.78);
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* MOBILE */
+@media(max-width: 1000px){
+
+  .exp-detail-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .exp-detail-image img{
+    height: 500px;
+  }
+
+  .exp-detail-content h2{
+    font-size: 44px;
+  }
+
+}
+
+/* layout invertito */
+.exp-detail-grid.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+/* mobile */
+@media(max-width:1000px){
+
+  .exp-detail-grid.reverse{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================
+   MOMENTS CINEMATIC
+========================================= */
+
+.moments-cinematic{
+  position: relative;
+  min-height: 120vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8%;
+}
+
+.moments-bg{
+  position: absolute;
+  inset: 0;
+}
+
+.moments-bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.03);
+}
+
+.moments-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.92) 15%,
+      rgba(0,0,0,0.55) 45%,
+      rgba(0,0,0,0.35) 100%
+    );
+}
+
+.moments-content{
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.moments-label{
+  color: #ff2b2b;
+
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.moments-content h2{
+  font-size: 82px;
+  line-height: 0.95;
+
+  margin-top: 22px;
+  margin-bottom: 30px;
+}
+
+.moments-big{
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  margin-bottom: 35px;
+
+  color: white;
+}
+
+.moments-content p{
+  font-size: 21px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.82);
+
+  margin-bottom: 24px;
+}
+
+/* mobile */
+@media(max-width:1000px){
+
+  .moments-cinematic{
+    min-height: auto;
+    padding: 120px 8%;
+  }
+
+  .moments-content h2{
+    font-size: 52px;
+  }
+
+  .moments-big{
+    font-size: 28px;
+  }
+
+}
+
+/* =========================================
+   MOMENTS SPECIAL
+========================================= */
+
+.moments-special{
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 100vh;
+
+  display: none;
+  align-items: center;
+
+  padding: 140px 8%;
+}
+
+/* quando attiva */
+
+.moments-special.active{
+  display:flex;
+}
+
+/* BG */
+
+.moments-special .moments-bg{
+  position:absolute;
+  inset:0;
+}
+
+.moments-special .moments-bg img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+object-position:center 44%;
+
+  filter:
+    brightness(0.7)
+    contrast(1.05);
+}
+
+/* overlay */
+
+.moments-special .moments-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.92) 15%,
+      rgba(0,0,0,0.55) 45%,
+      rgba(0,0,0,0.35) 100%
+    );
+}
+
+/* content */
+
+.moments-special .moments-content{
+  position:relative;
+  z-index:2;
+
+  max-width:760px;
+}
+
+.moments-special .moments-label{
+  color:#ff2b2b;
+
+  letter-spacing:4px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.moments-special h2{
+  font-size:82px;
+  line-height:0.95;
+
+  margin-top:22px;
+  margin-bottom:30px;
+}
+
+.moments-special .moments-big{
+  font-size:38px;
+  font-weight:700;
+
+  line-height:1.3;
+
+  margin-bottom:35px;
+}
+
+.moments-special p{
+  font-size:21px;
+  line-height:1.9;
+
+  color:rgba(255,255,255,0.82);
+
+  margin-bottom:24px;
+}
+
+/* =========================================
+   DEALER CINEMATIC
+========================================= */
+
+.dealer-cinematic{
+  position: relative;
+  min-height: 120vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8%;
+}
+
+.dealer-bg{
+  position: absolute;
+  inset: 0;
+}
+
+.dealer-bg img{
+
+  position: absolute;
+
+  right: -2%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  height: 100%;
+  width: auto;
+
+  object-fit: contain;
+
+  opacity: 0.9;
+}
+
+.dealer-overlay{
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.90) 30%,
+      rgba(0,0,0,0.65) 55%,
+      rgba(0,0,0,0.25) 100%
+    );
+}
+
+.dealer-content{
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.dealer-label{
+  color: #ff2b2b;
+
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dealer-content h2{
+  font-size: 78px;
+  line-height: 0.95;
+
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.dealer-content{
+  padding-right: 40%;
+}
+
+.dealer-big{
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin-bottom: 35px;
+
+  color: white;
+}
+
+.dealer-content p{
+  font-size: 20px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.82);
+
+  margin-bottom: 24px;
+}
+
+.dealer-stats{
+  display: flex;
+  gap: 50px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  flex-wrap: wrap;
+}
+
+.dealer-stats div{
+  display: flex;
+  flex-direction: column;
+}
+
+.dealer-stats strong{
+  font-size: 42px;
+  color: #ff2b2b;
+}
+
+.dealer-stats span{
+  color: rgba(255,255,255,0.7);
+  margin-top: 6px;
+}
+
+.dealer-btn{
+  display: inline-block;
+
+  padding: 18px 42px;
+
+  background: #ff2b2b;
+  color: white;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.dealer-btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(255,0,0,0.35);
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+  .dealer-cinematic{
+    min-height: auto;
+    padding: 120px 8%;
+  }
+
+  .dealer-content h2{
+    font-size: 52px;
+  }
+
+  .dealer-big{
+    font-size: 28px;
+  }
+
+  .dealer-stats{
+    gap: 30px;
+  }
+
+}
+
+/* =========================================
+   MARIO PREMIUM SECTION
+========================================= */
+
+.mario-cinematic{
+  display:grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  min-height:100vh;
+
+  background:#000;
+
+  overflow:hidden;
+}
+
+/* LEFT */
+
+.mario-content{
+
+  padding:
+    140px
+    80px
+    120px
+    100px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  position:relative;
+  z-index:5;
+}
+
+/* LABEL */
+
+.mario-label{
+  color:#ff2b2b;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  margin-bottom:20px;
+}
+
+/* TITLE */
+
+.mario-content h2{
+
+  font-size:100px;
+  line-height:0.9;
+
+  font-weight:900;
+
+  margin-bottom:20px;
+}
+
+.mario-content h2 span{
+  display:block;
+  color:#ff2b2b;
+}
+
+.mario-content h3{
+
+  font-size:28px;
+
+  color:rgba(255,255,255,0.7);
+
+  margin-bottom:50px;
+}
+
+/* STATS */
+
+.mario-stats{
+  display:flex;
+  gap:50px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:50px;
+}
+
+.mario-stats strong{
+  display:block;
+
+  font-size:58px;
+  color:#ff2b2b;
+}
+
+.mario-stats span{
+  color:rgba(255,255,255,0.65);
+
+  font-size:14px;
+
+  letter-spacing:2px;
+}
+
+/* TEXT */
+
+.mario-big-text{
+
+  font-size:30px;
+  line-height:1.45;
+
+  font-weight:700;
+
+  max-width:700px;
+
+  margin-bottom:30px;
+}
+
+.mario-small-text{
+
+  font-size:20px;
+  line-height:1.9;
+
+  color:rgba(255,255,255,0.72);
+
+  max-width:700px;
+
+  margin-bottom:40px;
+}
+
+/* LINKS */
+
+.mario-links{
+  display:flex;
+  gap:16px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:30px;
+}
+
+.mario-links a{
+
+  padding:14px 22px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  color:white;
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+.mario-links a:hover{
+  background:#ff2b2b;
+}
+
+/* SKILLS */
+
+.mario-skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+
+  margin-bottom:45px;
+}
+
+.mario-skills span{
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  padding:12px 16px;
+
+  border-radius:12px;
+
+  font-size:13px;
+}
+
+/* BUTTON */
+
+.mario-btn{
+
+  width:fit-content;
+
+  padding:18px 38px;
+
+  background:#ff2b2b;
+
+  border-radius:14px;
+
+  color:white;
+  text-decoration:none;
+
+  font-weight:700;
+
+  transition:0.3s;
+}
+
+.mario-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(255,0,0,0.3);
+}
+
+/* RIGHT IMAGE */
+
+.mario-image-side{
+
+  position:relative;
+
+  height:100vh;
+
+  overflow:hidden;
+}
+
+.mario-image-side img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  filter:
+    brightness(0.85)
+    contrast(1.05);
+}
+
+/* OVERLAY */
+
+.mario-image-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.25) 40%,
+      rgba(0,0,0,0.4) 100%
+    );
+}
+
+/* FOUNDER */
+
+.mario-founder-text{
+
+  position:absolute;
+
+  right:10px;
+  top:50%;
+
+  transform:
+    translateY(-50%)
+    rotate(180deg);
+
+  writing-mode:vertical-rl;
+
+  font-size:140px;
+  font-weight:900;
+
+  letter-spacing:10px;
+
+  color:rgba(255,255,255,0.10);
+
+  z-index:5;
+
+  pointer-events:none;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+  .mario-cinematic{
+    grid-template-columns:1fr;
+  }
+
+  .mario-image-side{
+    height:60vh;
+  }
+
+  .mario-content{
+    padding:100px 8%;
+  }
+
+  .mario-content h2{
+    font-size:64px;
+  }
+
+  .mario-founder-text{
+    font-size:80px;
+  }
+
+}
+

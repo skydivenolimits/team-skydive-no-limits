@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Skydive No Limits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <a href="#home" class="logo">
+      <img src="assets/images/sky-icon.png" class="logo-icon">
+      <img src="assets/images/logo-text.png" class="logo-text">
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Chi siamo</a>
+      <a href="#founder" class="nav-highlight">Mario No Limits</a>
+      <a href="#esperienze">Esperienze</a>
+      <a href="#dealer">Attrezzature</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <video id="video" autoplay muted loop>
+    <source src="assets/videos/skydiving.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay">
+    <h1>TEAM SKYDIVE NO LIMITS</h1>
+    <p>Vivi il cielo. Senza limiti.</p>
+  </div>
+
+  <div class="audio-control" onclick="toggleAudio()" id="audioBtn">🔇</div>
+</section>
+
+<!-- 🔥 CHI SIAMO HERO -->
+<section id="about" class="about-hero">
+  <img src="assets/images/sky1.jpeg">
+
+  <div class="about-hero-text">
+    <h2>Non è solo skydiving.</h2>
+    <h3>È uno stile di vita.</h3>
+    <a href="#about-content" class="cta">Scopri il team</a>
+  </div>
+</section>
+
+<!-- CONTENUTO CHI SIAMO -->
+<section id="about-content" class="section about-split">
+
+  <div class="split">
+
+    <div class="split-img">
+      <img src="assets/images/sky6.jpeg">
+    </div>
+
+    <div class="split-text">
+      <h2>Siamo un team.</h2>
+
+      <p>
+        Paracadutisti. Professionisti e non.  
+        Uniti dalla stessa ossessione: il cielo.
+      </p>
+
+      <p>
+        Viaggiamo tra le migliori drop zone in Italia e nel mondo,
+        condividendo esperienze, crescita e adrenalina pura.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MARIO SECTION -->
+<section id="founder" class="mario-cinematic">
+
+  <!-- LEFT CONTENT -->
+  <div class="mario-content">
+
+    <span class="mario-label">
+      👤 FONDATORE
+    </span>
+
+    <h2>
+      MARIO
+      <span>NO LIMITS</span>
+    </h2>
+
+    <h3>COACH & FOUNDER</h3>
+
+    <!-- STATS -->
+    <div class="mario-stats">
+
+      <div>
+        <strong>12.000+</strong>
+        <span>SALTI</span>
+      </div>
+
+      <div>
+        <strong>5.000+</strong>
+        <span>ALLIEVI AFF</span>
+      </div>
+
+      <div>
+        <strong>4.000+</strong>
+        <span>TANDEM</span>
+      </div>
+
+    </div>
+
+    <!-- BIG TEXT -->
+    <p class="mario-big-text">
+      Non insegna solo a saltare.
+      Costruisce mentalità,
+      controllo e fiducia in aria.
+    </p>
+
+    <!-- SMALL -->
+    <p class="mario-small-text">
+      Oltre dodicimila salti,
+      migliaia di studenti AFF
+      e anni di esperienza internazionale.
+      Un riferimento nel panorama skydiving.
+    </p>
+
+    <!-- LINKS -->
+    <div class="mario-links">
+
+      <a href="https://www.uspa.org/" target="_blank">
+        🌍 S&TA USPA
+      </a>
+
+      <a href="https://www.uspa.org/locator/sta" target="_blank">
+        🪂 SKYDIVE USPA
+      </a>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div class="mario-skills">
+
+      <span>SKYDIVING COACH</span>
+      <span>AFF INSTRUCTOR</span>
+      <span>SL INSTRUCTOR</span>
+      <span>TANDEM SIGMA</span>
+      <span>TANDEM PARADIGM</span>
+
+    </div>
+
+    <!-- BUTTON -->
+    <a href="#contatti" class="mario-btn">
+      Salta con Mario →
+    </a>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="mario-image-side">
+
+    <img src="assets/images/mario-ocean.jpg">
+
+    <div class="mario-image-overlay"></div>
+
+    <div class="mario-founder-text">
+      FOUNDER
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ESPERIENZE -->
+<section id="esperienze" class="esperienze-section">
+
+  <h2 class="section-title">Esperienze che non dimentichi</h2>
+
+<div class="esperienze-grid">
+
+  <!-- CARD 1 -->
+  <div class="exp-card" onclick="openExp('travel')">
+
+    <img src="assets/images/sky5.jpg">
+
+    <div class="exp-overlay"></div>
+
+    <div class="exp-text">
+      <h3>Travel & Drop Zone</h3>
+      <p>Viaggi tra le migliori drop zone</p>
+    </div>
+
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="exp-card" onclick="openExp('growth')">
+
+    <img src="assets/images/sky3.jpeg">
+
+    <div class="exp-overlay"></div>
+
+    <div class="exp-text">
+      <h3>Crescita reale</h3>
+      <p>Allenamento, tecnica e mindset</p>
+    </div>
+
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="exp-card" onclick="openExp('moments')">
+
+    <img src="assets/images/sky4.jpeg">
+
+    <div class="exp-overlay"></div>
+
+    <div class="exp-text">
+      <h3>Momenti unici</h3>
+      <p>Esperienze che vanno oltre il salto</p>
+    </div>
+
+  </div>
+
+</div>
+
+  <p class="esperienze-cta">
+    Se senti che è il tuo mondo... allora è casa tua.
+  </p>
+
+</section>
+
+<section id="travel" class="exp-detail">
+
+  <div class="exp-detail-grid">
+
+    <!-- FOTO -->
+    <div class="exp-detail-image">
+      <img src="assets/images/travel-team.jpg">
+    </div>
+
+    <!-- TESTO -->
+    <div class="exp-detail-content">
+
+      <span class="exp-label">🌍 EXPERIENCE</span>
+
+      <h2>Travel & Drop Zone</h2>
+
+      <p class="exp-big">
+        Ogni drop zone ha la sua energia.
+      </p>
+
+      <p>
+        Non si tratta solo di saltare.
+        Si tratta di viaggiare, conoscere persone,
+        vivere posti incredibili e sentirsi a casa
+        ovunque ci sia un aereo pronto a decollare.
+      </p>
+
+      <p>
+        Dai briefing prima del decollo,
+        alle giornate colme di adrenalina,
+        ogni viaggio crea legami che restano.
+      </p>
+
+      <p>
+        Dall’Italia agli Stati Uniti,
+        ogni esperienza diventa una storia da ricordare.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="growth" class="exp-detail">
+
+  <div class="exp-detail-grid reverse">
+
+    <!-- TESTO -->
+    <div class="exp-detail-content">
+
+      <span class="exp-label">🧠 MINDSET & TRAINING</span>
+
+      <h2>Crescita reale</h2>
+
+      <p class="exp-big">
+        La paura non sparisce.  
+        Impari a dominarla.
+      </p>
+
+      <p>
+        Lo skydiving non cambia solo il modo
+        in cui voli.
+      </p>
+
+      <p>
+        Cambia il modo in cui reagisci,
+        prendi decisioni e affronti i tuoi limiti.
+      </p>
+
+      <p>
+        Con oltre 5.000 allievi AFF seguiti,
+        Mario ha costruito un metodo basato su
+        controllo, consapevolezza e fiducia reale.
+      </p>
+
+      <p>
+        Non sei mai lasciato solo.
+        Cresci salto dopo salto,
+        con qualcuno che sa esattamente
+        dove vuoi arrivare.
+      </p>
+
+    </div>
+
+    <!-- FOTO -->
+    <div class="exp-detail-image">
+      <img src="assets/images/growth-coach.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section id="moments" class="exp-detail moments-special">
+
+  <!-- BACKGROUND -->
+  <div class="moments-bg">
+    <img src="assets/images/moments-sunset.jpg">
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="moments-overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="moments-content">
+
+    <span class="moments-label">
+      ✨ HUMAN EXPERIENCE
+    </span>
+
+    <h2>
+      Momenti unici
+    </h2>
+
+    <p class="moments-big">
+      Alcune sensazioni non si spiegano.
+      Si vivono.
+    </p>
+
+    <p>
+      Lo skydiving crea connessioni vere.
+      Persone diverse,
+      unite dalla stessa sensazione:
+      sentirsi vivi.
+    </p>
+
+    <p>
+      Il momento dopo l’atterraggio.
+      Gli occhi pieni di adrenalina.
+      Le risate.
+      Il sole che scende sulla drop zone.
+    </p>
+
+    <p>
+      È molto più di uno sport.
+      È libertà.
+      È famiglia.
+      È casa.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- DEALER -->
+<section id="dealer" class="dealer-cinematic">
+
+  <!-- BG IMAGE -->
+  <div class="dealer-bg">
+    <img src="assets/images/dealer-gear.jpg">
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="dealer-overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="dealer-content">
+
+    <span class="dealer-label">
+      ⚡ PERFORMANCE GEAR
+    </span>
+
+    <h2>
+      Gear. Performance. Identity.
+    </h2>
+
+    <p class="dealer-big">
+      Non è solo quello che fai in aria.
+      È anche con cosa lo fai.
+    </p>
+
+    <p>
+      Ogni dettaglio conta.
+      Dalla vela al casco,
+      fino alla configurazione perfetta
+      per sentirti davvero in controllo.
+    </p>
+
+    <p>
+      Team Skydive No Limits collabora con brand,
+      setup e attrezzature utilizzate
+      ogni giorno da skydiver esperti e professionisti.
+    </p>
+
+    <div class="dealer-stats">
+
+      <div>
+        <strong>PRO</strong>
+        <span>Equipment</span>
+      </div>
+
+      <div>
+        <strong>REAL</strong>
+        <span>Experience</span>
+      </div>
+
+      <div>
+        <strong>100%</strong>
+        <span>Skydiving</span>
+      </div>
+
+    </div>
+
+    <a href="mailto:skydivenolimits@gmail.com" class="dealer-btn">
+      Contattaci
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="join">
+  <h2>Vuoi saltare con noi?</h2>
+  <a href="mailto:skydivenolimits@gmail.com">ENTRA NEL TEAM</a>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="section">
+  <h2>Contatti</h2>
+
+  <p>Email: skydivenolimits@gmail.com</p>
+
+  <a href="https://www.instagram.com/skydivenolimits" target="_blank" class="instagram-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+    Seguici su Instagram
+  </a>
+</section>
+
+<script>
+function toggleAudio() {
+  const video = document.getElementById("video");
+  const btn = document.getElementById("audioBtn");
+
+  video.muted = !video.muted;
+  btn.innerHTML = video.muted ? "🔇" : "🔊";
+}
+</script>
+
+<script>
+
+function openExp(id) {
+
+  // chiude tutte
+  document.querySelectorAll('.exp-detail')
+    .forEach(section => {
+      section.classList.remove('active');
+    });
+
+  // apre quella cliccata
+  document.getElementById(id)
+    .classList.add('active');
+
+  // scroll automatico
+  document.getElementById(id)
+    .scrollIntoView({
+      behavior: 'smooth'
+    });
+}
+
+</script>
+
+</body>
+</html>
